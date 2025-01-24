@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <script src="js/numbers.js"></script>
+    <script src="js/operations.js">s</script>
+
+    <style>
+        /* General Styling */
+        center
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #f7f7f7, #e9ecef);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #calculator {
+            width: 200px;
+            background: #1be709;
+            border-radius: 12px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #333333;
+            font-size: 24px;
+        }
+
+        input[type="text"] {
+            width: 50%;
+            height: 30px;
+            border-radius: 8px;
+            border: 2px solid #db43fa;
+            font-size: 1.5rem;
+            text-align: right;
+            padding: 10px;
+            margin-bottom: 20px;
+            color: #333;
+            background: #f9f9f9;
+            outline: none;
+        }
+
+        button {
+            width: 10%;
+            height: 30px;
+            margin: 1%;
+            font-size: 1.2rem;
+            color: rgb(1, 23, 27);
+            background: #f535ab;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        button:hover {
+            background: #e7f756;
+        }
+
+        button:active {
+            background: #e6f147;
+            transform: scale(0.95);
+        }
+
+        button:nth-child(4n) {
+            background: #1cf109;
+        }
+
+        button:nth-child(4n):hover {
+            background: #660334;
+        }
+
+        button:nth-child(4n):active {
+            background: #f832e8;
+        }
+
+        button#clear {
+            background: #e91b7b;
+        }
+
+        button#clear:hover {
+            background: #ec164b;
+        }
+
+        button#clear:active {
+            background: #a93226;
+        }
+
+        button#equals {
+            background: #3498db;
+            width: 47%;
+        }
+
+        button#equals:hover {
+            background: #2980b9;
+        }
+
+        button#equals:active {
+            background: #1f618d;
+        }
+    </style>
+</head>
+<body>
+    <h1>Simple Calculator</h1>
+    <form name="calculator">
+        <input type="text" id="display" value="0" readonly>
+        <input type="text" id="display2" readonly>
+        <input type="text" id="operator" readonly>
+        <br><br> 
+        <button type="button" onclick="seven()">7</button>
+        <button type="button" onclick="eight()">8</button>
+        <button type="button" onclick="nine()">9</button>
+        <button type="button" onclick="addition()">+</button>
+        <br><br>
+        <button type="button" onclick="four()">4</button>
+        <button type="button" onclick="five()">5</button>
+        <button type="button" onclick="six()">6</button>
+        <button type="button" onclick="subtraction()">-</button>
+        <br><br>
+        <button type="button" onclick="one()">1</button>
+        <button type="button" onclick="two()">2</button>
+        <button type="button" onclick="three()">3</button>
+        <button type="button" onclick="multiplication()">*</button>
+        <br><br>
+        <button type="button" onclick="zero()">0</button>
+        <button type="button" onclick="dot()">.</button>
+        <button type="button" onclick="equals()">=</button>
+        <button type="button" onclick="division()">/</button>
+    </form>
+</body>
+</html>
